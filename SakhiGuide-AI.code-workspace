@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "name": "SakhiGuide-AI (Women Scheme)",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true
+    }
+  }
+}

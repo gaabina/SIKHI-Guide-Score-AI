@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>மகளிர் திட்டம் | Women Scheme</title>
+  <meta name="description" content="கிராமப்புற மற்றும் எளிய பெண்களுக்கான இலவச சமையல் எரிவாயு (உஜ்வாலா) வழிகாட்டி">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       AMBIENT BACKGROUND LAYERS
+       ============================================================ -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="bg-gradient-base"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- ============================================================
+       MINIMAL FLOATING HEADER
+       ============================================================ -->
+  <header class="floating-header" role="banner" id="siteHeader">
+    <div class="fh-inner">
+      <div class="fh-brand">
+        <div class="fh-orb" aria-hidden="true"></div>
+        <span class="fh-title">மகளிர் திட்டம்</span>
+        <span class="fh-badge">உஜ்வாலா 2.0</span>
+      </div>
+      <button id="homeBtn" class="fh-home-btn" aria-label="தொடக்க பக்கம்">
+        <span aria-hidden="true">🏠</span>
+        <span>தொடக்கம்</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       SCROLL PROGRESS
+       ============================================================ -->
+  <div class="scroll-progress" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MAIN WELCOME JOURNEY (5 SCROLL SECTIONS)
+       ============================================================ -->
+  <main id="welcomeScreen" class="journey-wrapper screen active">
+
+    <!-- ===========================================================
+         SECTION 1 – HERO: HUMAN VISUAL + VANAKKAM
+         =========================================================== -->
+    <section class="journey-section s1" id="section1" aria-label="வணக்கம்">
+      <div class="s1-frame">
+
+        <!-- Human Visual -->
+        <div class="s1-human-col">
+        <div class="human-visual-wrap" id="humanVisual" role="button" tabindex="0" aria-pressed="false"
+             aria-label="மகளிர் திட்டம் வழிகாட்டி — மினுமினுப்பு சட்டத்திற்குத் தொடுங்கள்">
+          <span class="glitter-frame" aria-hidden="true"></span>
+          <div class="human-frame-glow" aria-hidden="true"></div>
+          <img
+            src="/static/sakhi_guide.jpg"
+            alt="மகளிர் திட்டம் – உங்கள் தமிழ் AI வழிகாட்டி"
+            class="human-portrait"
+            loading="eager"
+          >
+          <div class="human-frame-border" aria-hidden="true"></div>
+          <!-- Floating AI badge on image -->
+          <div class="human-ai-badge" aria-hidden="true">
+            <span class="aibadge-orb"></span>
+            <span>Women Scheme</span>
+          </div>
+        </div>
+
+          <!-- Thirukkural card (tap for glitter frame) -->
+          <figure class="kural-card" id="kuralCard" role="button" tabindex="0" aria-pressed="false"
+                  aria-label="திருக்குறள் — மினுமினுப்பு சட்டத்தைப் பார்க்க தொடுங்கள்">
+            <span class="glitter-frame" aria-hidden="true"></span>
+            <div class="kc-head">
+              <span class="kc-ornament" aria-hidden="true">❦</span>
+              <span class="kc-label">திருக்குறள்</span>
+              <span class="kc-num">குறள் 616</span>
+            </div>
+            <blockquote class="kc-text">
+              முயற்சி திருவினை ஆக்கும் முயற்றின்மை<br>
+              இன்மை புகுத்தி விடும்.
+            </blockquote>
+            <figcaption class="kc-meaning">
+              எளிய பொருள்: விடாமுயற்சி நன்மையையும் வளத்தையும் தரும்; சோம்பல் வறுமையைத் தரும்.
+            </figcaption>
+            <span class="kc-tap-hint" aria-hidden="true">✦ இங்கே தொடுங்கள்</span>
+          </figure>
+        </div>
+
+        <!-- Hero Text -->
+        <div class="s1-text" id="welcomeHeading">
+          <div class="s1-greeting-chip" aria-hidden="true">
+            <span>✨</span>
+            <span>மத்திய அரசு உஜ்வாலா திட்டம்</span>
+          </div>
+          <h1 class="s1-headline">
+            <span class="s1-vanakkam">வணக்கம்!</span>
+            <span class="s1-subline">உங்களுக்கு உதவ நான் இங்கே இருக்கிறேன்.</span>
+          </h1>
+          <p class="s1-desc">எளிய தமிழில் அரசு திட்டங்களைப் புரிந்துகொள்ள உதவும் AI நண்பர்.</p>
+
+          <!-- Yes / No Card -->
+          <div class="yesno-card glitter">
+            <span class="glitter-frame" aria-hidden="true"></span>
+            <p class="yesno-question">உங்களுக்கு சமையல் கேஸ் இணைப்பு பற்றி தெரிந்துகொள்ள வேண்டுமா?</p>
+            <div class="yesno-row">
+              <button type="button" id="btnYes" class="btn-yes" aria-label="ஆம், தெரிந்துகொள்ள வேண்டும்">
+                <span aria-hidden="true">👍</span>
+                <strong>ஆம்</strong>
+                <small>விளக்கம் வேண்டும்</small>
+              </button>
+              <button type="button" id="btnNo" class="btn-no" aria-label="இல்லை">
+                <span aria-hidden="true">❌</span>
+                <strong>இல்லை</strong>
+                <small>உதவி மட்டும்</small>
+              </button>
+            </div>
+          </div>
+
+
+          <!-- Hero Voice / Type CTA row -->
+          <div class="s1-cta-row glitter">
+            <span class="glitter-frame" aria-hidden="true"></span>
+            <button type="button" id="startVoiceBtn" class="s1-voice-btn" aria-label="குரல் மூலம் தமிழில் பேசுங்கள்">
+              <span class="s1vb-icon" aria-hidden="true">🎤</span>
+              <span class="s1vb-label">பேசுங்கள்</span>
+            </button>
+            <div class="lang-toggle" role="group" aria-label="பேசும் மொழியை தேர்வு செய்யுங்கள்">
+              <button type="button" class="lang-btn active" data-lang="ta" aria-pressed="true">தமிழ்</button>
+              <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+            </div>
+            <button type="button" id="showTypeBtn" class="s1-type-btn" aria-label="எழுத்து மூலம் கேளுங்கள்">
+              <span aria-hidden="true">⌨️</span>
+              <span>எழுதுங்கள்</span>
+            </button>
+          </div>
+
+          <div class="scroll-cue" aria-hidden="true">
+            <span class="sc-text">கீழே செல்லுங்கள்</span>
+            <span class="sc-arrow">↓</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         SECTION 2 – SCHEME INTRO
+         =========================================================== -->
+    <section class="journey-section s2 reveal-section" id="section2" aria-label="திட்ட அறிமுகம்">
+      <div class="s2-layout">
+        <!-- Floating Human (smaller, side) -->
+        <div class="s2-human-mini" aria-hidden="true">
+          <img src="/static/sakhi_guide.jpg" alt="" class="s2-portrait" loading="lazy">
+          <div class="s2-human-glow"></div>
+        </div>
+
+        <div class="s2-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>திட்ட தகவல்</span>
+          </div>
+          <h2 class="s2-title">
+            அரசு திட்டங்களைப் புரிந்துகொள்வது
+            <span class="gradient-text">இனி எளிது.</span>
+          </h2>
+          <p class="s2-body">
+            பிரதான் மந்திரி உஜ்வாலா யோஜனா — ஏழை பெண்களுக்கு
+            <strong>இலவச கேஸ் சிலிண்டர்</strong> மற்றும் <strong>அடுப்பு</strong> வழங்கும் அரசு திட்டம்.
+          </p>
+
+          <!-- Real-life help cards: expand in place, official links open in new tab -->
+          <div class="help-cards">
+            <div class="help-card glitter">
+              <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+              <button type="button" class="help-card-head" aria-expanded="false" aria-controls="helpBodyFree">
+                <span class="hc-icon" aria-hidden="true">💰</span>
+                <span class="hc-title">முற்றிலும் இலவசம்</span>
+                <span class="hc-chev" aria-hidden="true">▾</span>
+              </button>
+              <div class="help-card-body" id="helpBodyFree">
+                <div class="hc-inner">
+                  <p class="hc-text">இந்த திட்டத்திற்கு அரசு கட்டணம் இல்லை. யாராவது தேவையில்லாமல் பணம் கேட்டால், அதிகாரப்பூர்வ தகவலை சரிபார்க்கவும்.</p>
+                  <a class="hc-link" href="https://www.pmuy.gov.in/" target="_blank" rel="noopener noreferrer">
+                    அதிகாரப்பூர்வ தகவலைப் பார்க்க <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-card glitter">
+              <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+              <button type="button" class="help-card-head" aria-expanded="false" aria-controls="helpBodyDocs" data-docs="1">
+                <span class="hc-icon" aria-hidden="true">📄</span>
+                <span class="hc-title">எளிய ஆவணங்கள்</span>
+                <span class="hc-chev" aria-hidden="true">▾</span>
+              </button>
+              <div class="help-card-body" id="helpBodyDocs">
+                <div class="hc-inner">
+                  <ul class="hc-docs" id="helpDocsList"></ul>
+                  <a class="hc-link" href="https://www.pmuy.gov.in/ujjwala2.html" target="_blank" rel="noopener noreferrer">
+                    அதிகாரப்பூர்வ தகவலைப் பார்க்க <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-card glitter">
+              <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+              <button type="button" class="help-card-head" aria-expanded="false" aria-controls="helpBodyApply">
+                <span class="hc-icon" aria-hidden="true">📍</span>
+                <span class="hc-title">அருகிலேயே விண்ணப்பம்</span>
+                <span class="hc-chev" aria-hidden="true">▾</span>
+              </button>
+              <div class="help-card-body" id="helpBodyApply">
+                <div class="hc-inner">
+                  <p class="hc-text">உங்களுக்கு அருகிலுள்ள LPG விநியோகஸ்தர் மூலம் விண்ணப்பிக்கலாம்.</p>
+                  <p class="hc-text hc-sub">அதிகாரப்பூர்வ PMUY இணையதளத்தில் உங்கள் பகுதிக்கான விண்ணப்ப மையம் மற்றும் LPG விநியோகஸ்தர் தகவலைப் பார்க்கலாம். வேறு இணையதளங்களை நம்ப வேண்டாம்.</p>
+                  <a class="hc-link" href="https://www.pmuy.gov.in/" target="_blank" rel="noopener noreferrer">
+                    அதிகாரப்பூர்வ PMUY இணையதளம் <span aria-hidden="true">↗</span>
+                  </a>
+                  <a class="hc-link hc-link-alt" href="https://www.pmuy.gov.in/" target="_blank" rel="noopener noreferrer">
+                    📍 அருகிலுள்ள LPG விநியோகஸ்தரைத் தேடுங்கள் <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         SECTION 3 – WOMEN SCHEME AI INTRODUCTION
+         =========================================================== -->
+    <section class="journey-section s3 reveal-section" id="section3" aria-label="மகளிர் திட்டம் AI அறிமுகம்">
+      <div class="s3-center">
+        <!-- Large Glowing AI Orb -->
+        <div class="big-ai-orb" aria-hidden="true">
+          <div class="bao-core">
+            <div class="bao-inner"></div>
+          </div>
+          <div class="bao-ring br1"></div>
+          <div class="bao-ring br2"></div>
+          <div class="bao-ring br3"></div>
+          <div class="bao-particles">
+            <span class="bap p1"></span>
+            <span class="bap p2"></span>
+            <span class="bap p3"></span>
+            <span class="bap p4"></span>
+            <span class="bap p5"></span>
+          </div>
+        </div>
+        <p class="orb-move-hint" aria-hidden="true">
+          <span class="omh-icon">✥</span> இழுத்து நகர்த்துங்கள் · தொட்டால் உரையாடல்
+        </p>
+
+        <div class="s3-text">
+          <span class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Women Scheme AI</span>
+          </span>
+          <h2 class="s3-title">உங்களுக்கு என்ன<br>தெரிந்துகொள்ள வேண்டும்?</h2>
+          <p class="s3-desc">
+            ஒரு கேள்வி மட்டும் கேளுங்கள் — குரலாலோ, எழுத்தாலோ.
+            <br>நான் எளிய தமிழில் விளக்குகிறேன்.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         SECTION 4 – SIX GUIDED QUESTIONS
+         =========================================================== -->
+    <section class="journey-section s4 reveal-section" id="section4" aria-labelledby="guidanceHeading">
+      <div class="s4-inner">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span>ஒரு தொடுதலில் தகவல்</span>
+        </div>
+        <h2 id="guidanceHeading" class="s4-title">மகளிர் திட்டம் AI-யிடம் கேளுங்கள்.</h2>
+        <p class="s4-subtitle">கீழே உள்ள எதையும் தொட்டு உடனே தெரிந்துகொள்ளலாம்.</p>
+
+        <div class="guidance-grid" id="starterQuestionsGrid">
+
+          <button type="button" class="guide-card glitter" data-query="நான் தகுதியானவளா?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">🙋‍♀️</span></div>
+            <div class="gc-text">
+              <h3>நான் தகுதியானவளா?</h3>
+              <p>வயது மற்றும் குடும்ப தகுதி</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="guide-card glitter" data-query="என்ன ஆவணங்கள் வேண்டும்?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">📄</span></div>
+            <div class="gc-text">
+              <h3>என்ன ஆவணங்கள் வேண்டும்?</h3>
+              <p>ஆதார், ரேஷன் கார்டு, வங்கி</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="guide-card glitter" data-query="என்ன நன்மைகள் கிடைக்கும்?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">🎁</span></div>
+            <div class="gc-text">
+              <h3>என்ன நன்மைகள் கிடைக்கும்?</h3>
+              <p>இலவச சிலிண்டர், அடுப்பு & மானியம்</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="guide-card glitter" data-query="எப்படி விண்ணப்பிப்பது?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">📝</span></div>
+            <div class="gc-text">
+              <h3>எப்படி விண்ணப்பிப்பது?</h3>
+              <p>5 எளிய படிநிலைகள்</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="guide-card glitter" data-query="எங்கு விண்ணப்பிப்பது?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">📍</span></div>
+            <div class="gc-text">
+              <h3>எங்கு விண்ணப்பிப்பது?</h3>
+              <p>அருகிலுள்ள கேஸ் ஏஜென்சி</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="guide-card glitter" data-query="கட்டணம் ஏதும் உண்டா?">
+            <span class="glitter-frame gf-inset" aria-hidden="true"></span>
+            <div class="gc-icon-wrap" aria-hidden="true"><span class="gc-icon">💰</span></div>
+            <div class="gc-text">
+              <h3>கட்டணம் ஏதும் உண்டா?</h3>
+              <p>முற்றிலும் இலவசம் — ஒரு ரூபாயும் இல்லை</p>
+            </div>
+            <span class="gc-arrow" aria-hidden="true">→</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         SECTION 5 – VOICE / TEXT INTERACTION + TRUST
+         =========================================================== -->
+    <section class="journey-section s5" id="voiceInteractionSection" aria-labelledby="interactionHeadline">
+      <div class="s5-inner">
+
+        <div class="s5-head glitter">
+          <span class="glitter-frame" aria-hidden="true"></span>
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>குரல் வழி உரையாடல்</span>
+          </div>
+          <h2 id="interactionHeadline" class="s5-title">பேசுங்கள். நான் கேட்கிறேன்.</h2>
+          <p class="s5-desc">எழுதவோ தட்டச்சு செய்யவோ தேவையில்லை. உங்கள் சொந்த குரலில் கேட்கலாம்.</p>
+        </div>
+
+        <!-- Living Mic Stage -->
+        <div class="mic-stage">
+          <div class="mic-orbit-system" aria-hidden="true">
+            <div class="mor-ring r-out"></div>
+            <div class="mor-ring r-mid"></div>
+            <div class="mor-ring r-in"></div>
+            <div class="mic-waveform">
+              <span class="mwb wb1"></span>
+              <span class="mwb wb2"></span>
+              <span class="mwb wb3"></span>
+              <span class="mwb wb4"></span>
+              <span class="mwb wb5"></span>
+              <span class="mwb wb6"></span>
+              <span class="mwb wb7"></span>
+              <span class="mwb wb8"></span>
+            </div>
+          </div>
+
+          <button type="button" id="s5VoiceBtn" class="big-mic-btn" aria-label="குரல் மூலம் தமிழில் பேசுங்கள்">
+            <div class="bmb-inner">
+              <span class="bmb-icon" aria-hidden="true">🎤</span>
+              <span class="bmb-label">பேசுங்கள்</span>
+              <span class="bmb-hint">தொட்டு பேச தொடங்குங்கள்</span>
+            </div>
+          </button>
+
+          <div class="lang-toggle lang-toggle-stage" role="group" aria-label="பேசும் மொழியை தேர்வு செய்யுங்கள்">
+            <button type="button" class="lang-btn active" data-lang="ta" aria-pressed="true">தமிழ்</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+          </div>
+        </div>
+
+        <!-- Text Input Toggle -->
+        <div class="type-alt-bar">
+          <button type="button" id="s5TypeBtn" class="type-pill-btn" aria-label="எழுத்து மூலம் கேளுங்கள்">
+            <span aria-hidden="true">⌨️</span>
+            <span>எழுதி கேட்க விரும்புகிறீர்களா? <strong>எழுதுங்கள்</strong></span>
+            <span aria-hidden="true">➔</span>
+          </button>
+        </div>
+
+        <!-- Text Input Drawer -->
+        <div id="typeInputContainer" class="type-drawer hidden" aria-hidden="true">
+          <div class="td-card">
+            <div class="td-header">
+              <div class="td-title">
+                <span aria-hidden="true">⌨️</span>
+                <h4>உங்கள் கேள்வியை தமிழில் தட்டச்சு செய்யுங்கள்</h4>
+              </div>
+              <button type="button" id="closeTypeBtn" class="td-close" aria-label="மூடுக">✕</button>
+            </div>
+            <form id="textQueryForm" class="td-form">
+              <input
+                type="text"
+                id="textInputField"
+                class="td-input"
+                placeholder="எ.கா: எனக்கு இலவச சிலிண்டர் கிடைக்குமா?"
+                aria-label="கேள்வியை உள்ளிடவும்"
+                autocomplete="off"
+              >
+              <button type="submit" id="sendTextBtn" class="td-send">
+                <span>கேளுங்கள்</span>
+                <span aria-hidden="true">➔</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Trust Footer -->
+        <div class="trust-strip">
+          <div class="ts-item">
+            <span aria-hidden="true">🏛️</span>
+            <span>PMUY அதிகாரப்பூர்வ தகவல்</span>
+          </div>
+          <div class="ts-sep" aria-hidden="true"></div>
+          <div class="ts-item">
+            <span aria-hidden="true">🔒</span>
+            <span>பதிவு தேவையில்லை</span>
+          </div>
+          <div class="ts-sep" aria-hidden="true"></div>
+          <div class="ts-item">
+            <a href="tel:18002666696" class="ts-link">📞 1800-266-6696</a>
+          </div>
+          <div class="ts-sep" aria-hidden="true"></div>
+          <div class="ts-item">
+            <a href="tel:1906" class="ts-link ts-emergency">🚨 1906</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       ANSWER SCREEN
+       ============================================================ -->
+  <div id="answerScreen" class="screen answer-screen" aria-live="polite">
+
+    <div class="answer-aura" aria-hidden="true">
+      <div class="aa-orb"></div>
+    </div>
+
+    <div class="ans-container">
+      <!-- User Query -->
+      <div class="user-query-wrap">
+        <div class="uq-card">
+          <span class="uq-badge">நீங்கள் கேட்ட கேள்வி:</span>
+          <p id="userQuestionDisplay" class="uq-text"></p>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loadingBox" class="loading-box hidden">
+        <div class="lb-pulse" aria-hidden="true">
+          <span class="lbp n1"></span>
+          <span class="lbp n2"></span>
+          <span class="lbp n3"></span>
+        </div>
+        <p class="lb-text">தகவலை தயார் செய்கிறேன், சற்று காத்திருங்கள் அம்மா...</p>
+      </div>
+
+      <!-- Response Card -->
+      <article id="responseCard" class="resp-card">
+
+        <div class="resp-topbar">
+          <div class="resp-title-group">
+            <span class="verified-badge">
+              <span aria-hidden="true">✓</span>
+              <span>சரிபார்க்கப்பட்ட அரசு தகவல்</span>
+            </span>
+            <h2 id="responseTitle" class="resp-title"></h2>
+          </div>
+          <div class="resp-audio-cluster">
+            <button type="button" id="speakResponseBtn" class="audio-btn" aria-label="பதிலை குரல் மூலம் கேளுங்கள்">
+              <span aria-hidden="true">🔊</span>
+              <span id="audioBtnLabel">படித்துக் காட்டு</span>
+            </button>
+            <button type="button" id="stopResponseBtn" class="audio-btn audio-stop hidden" aria-label="குரலை நிறுத்து">
+              <span aria-hidden="true">⏹️</span>
+              <span>நிறுத்து</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="resp-body">
+          <div id="responseSummary" class="resp-summary"></div>
+          <ul id="responsePointsList" class="resp-points"></ul>
+
+          <div class="next-step-box">
+            <div class="nsb-header">
+              <span aria-hidden="true">👉</span>
+              <strong>அடுத்து நீங்கள் செய்ய வேண்டியது:</strong>
+            </div>
+            <p id="nextStepText" class="nsb-text"></p>
+          </div>
+        </div>
+
+        <div class="followups">
+          <h3 class="fu-heading"><span aria-hidden="true">💡</span> அடுத்து என்ன தெரிந்துகொள்ள வேண்டும்?</h3>
+          <div id="suggestedButtonsGrid" class="fu-grid"></div>
+        </div>
+
+        <div class="ans-bottom-nav">
+          <button type="button" id="speakAgainBtn" class="nav-btn nav-mic">
+            <span aria-hidden="true">🎤</span>
+            <span>மீண்டும் பேசுக</span>
+          </button>
+          <button type="button" id="backToHomeBtn" class="nav-btn nav-home">
+            <span aria-hidden="true">🏠</span>
+            <span>முதன்மை பக்கம்</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       VOICE LISTENING MODAL
+       ============================================================ -->
+  <div id="voiceModal" class="voice-modal hidden" role="dialog" aria-modal="true" aria-labelledby="voiceModalTitle">
+    <div class="vm-dialog">
+      <div class="vm-orb" aria-hidden="true">
+        <div class="vmo-l l1"></div>
+        <div class="vmo-l l2"></div>
+        <div class="vmo-l l3"></div>
+        <span class="vmo-icon">🎙️</span>
+      </div>
+      <h3 id="voiceModalTitle" class="vm-title">நான் கேட்கிறேன் அம்மா...</h3>
+      <p class="vm-desc">உங்கள் கேள்வியை தமிழில் தெளிவாக பேசுங்கள்.</p>
+      <div id="voiceTranscriptPreview" class="vm-transcript">(பேசும் வார்த்தைகள் இங்கே தெரியும்...)</div>
+      <button type="button" id="cancelVoiceBtn" class="vm-cancel">முடிந்தது / நிறுத்து</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLOATING CHATBOT (SMALL, BOTTOM-RIGHT)
+       ============================================================ -->
+  <div id="sakhiChatbot" class="sakhi-chatbot" aria-label="மகளிர் திட்டம் AI உரையாடல்">
+
+    <!-- Collapsed: orb button -->
+    <button
+      id="chatbotToggle"
+      class="chatbot-toggle"
+      aria-label="மகளிர் திட்டம் AI உரையாடலை திறக்க"
+      aria-expanded="false"
+      aria-controls="chatbotWindow"
+    >
+      <div class="ct-orb" aria-hidden="true">
+        <div class="ct-orb-core"></div>
+        <div class="ct-orb-ring cr1"></div>
+        <div class="ct-orb-ring cr2"></div>
+      </div>
+      <span class="ct-label">உதவி</span>
+      <span class="ct-notif" id="chatNotif" aria-hidden="true"></span>
+    </button>
+
+    <!-- Expanded: chat window -->
+    <div id="chatbotWindow" class="chatbot-window" aria-hidden="true">
+
+      <div class="cw-header">
+        <div class="cw-avatar" aria-hidden="true">
+          <div class="cwa-orb"></div>
+          <img src="/static/sakhi_guide.jpg" alt="" class="cwa-img">
+        </div>
+        <div class="cw-info">
+          <strong class="cw-name">மகளிர் திட்டம்</strong>
+          <span class="cw-status">
+            <span class="cw-online-dot" aria-hidden="true"></span>
+            <span>Online</span>
+          </span>
+        </div>
+        <button type="button" id="chatbotClose" class="cw-close" aria-label="உரையாடலை மூடு">✕</button>
+      </div>
+
+      <div class="cw-messages" id="chatMessages" aria-live="polite">
+        <div class="cwm-sakhi">
+          <div class="cwm-bubble">
+            வணக்கம்! 👋 நான் மகளிர் திட்டம் AI.
+            <br>என்ன உதவி தேவை?
+          </div>
+          <div class="cwm-typing hidden" id="chatTyping">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cw-actions">
+        <button type="button" id="chatVoiceBtn" class="cwa-voice" aria-label="குரலில் பேசு">
+          <span aria-hidden="true">🎤</span>
+          <span>பேசுங்கள்</span>
+        </button>
+        <div class="cw-input-row">
+          <input
+            type="text"
+            id="chatTextInput"
+            class="cw-input"
+            placeholder="எழுதுங்கள்..."
+            aria-label="மகளிர் திட்டம் AI-யிடம் கேளுங்கள்"
+            autocomplete="off"
+          >
+          <button type="button" id="chatSendBtn" class="cw-send" aria-label="அனுப்பு">➔</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MINIMAL FOOTER
+       ============================================================ -->
+  <footer class="minimal-footer" role="contentinfo">
+    <p>மகளிர் திட்டம் • PMUY உஜ்வாலா 2.0 • <a href="https://www.pmuy.gov.in" target="_blank" rel="noopener">pmuy.gov.in</a></p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
